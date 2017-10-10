@@ -1,2 +1,2 @@
-# trabalho-ws
-Trabalho Programação III e BD II: Back-end
+# Trabalho WebService
+Trabalho de Sistemas Distribuídos
