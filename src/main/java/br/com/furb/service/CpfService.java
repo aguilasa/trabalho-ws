@@ -8,6 +8,7 @@ import javax.ws.rs.Produces;
 
 import br.com.furb.model.Cpf;
 import br.com.furb.model.response.Response;
+import br.com.furb.util.CpfValidator;
 
 @Path("/cpf")
 public class CpfService {
@@ -15,9 +16,12 @@ public class CpfService {
 	@POST
 	@Consumes("application/json; charset=UTF-8")
 	@Produces("application/json; charset=UTF-8")
-	@Path("/validar")
+	@Path("/validate")
 	public Response validar(Cpf cpf) {
-		return new Response(1);
+		if (CpfValidator.isCpf(cpf.getCpf().trim())) {
+			return new Response(1);
+		}
+		return new Response(0);
 	}
 
 	@GET
