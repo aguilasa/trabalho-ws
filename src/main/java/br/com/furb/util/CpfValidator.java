@@ -2,6 +2,7 @@ package br.com.furb.util;
 
 public class CpfValidator {
 	public static boolean isCpf(String cpf) {
+		cpf = cpf.replaceAll("\\.", "").replaceAll("-", "");
 		int digitosCpf[] = new int[11]; // dígitos do cpf
 		int i, j, totalSoma, resultado, verificador1, verificador2;
 		// efetua a conversão do cpf, de string para dígitos numéricos
