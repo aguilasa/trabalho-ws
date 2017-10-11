@@ -5,22 +5,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "cpf")
 public class Cpf {
 
-	private String valor;
+	private String cpf;
 
 	public Cpf() {
 	}
 
-	public Cpf(String valor) {
+	public Cpf(String cpf) {
 		super();
-		this.valor = valor;
+		this.cpf = cpf;
 	}
 
-	public String getValor() {
-		return valor;
+	public String getCpf() {
+		return cpf;
 	}
 
-	public void setValor(String valor) {
-		this.valor = valor;
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 }
