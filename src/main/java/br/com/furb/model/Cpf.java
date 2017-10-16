@@ -2,6 +2,11 @@ package br.com.furb.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+/**
+ * Classe modelo para o CPF
+ * @author ingmar
+ *
+ */
 @XmlRootElement(name = "cpf")
 public class Cpf {
 

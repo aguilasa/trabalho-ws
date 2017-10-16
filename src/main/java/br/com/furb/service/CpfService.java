@@ -1,7 +1,6 @@
 package br.com.furb.service;
 
 import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -10,6 +9,12 @@ import br.com.furb.model.Cpf;
 import br.com.furb.model.response.Response;
 import br.com.furb.util.CpfValidator;
 
+/**
+ * Esta classe é responsável por disponibilizar o serviço de validação do CPF
+ * no seguinte endereço: http://servidor/trabalho-ws/rest/cpf/validate
+ * @author ingmar
+ *
+ */
 @Path("/cpf")
 public class CpfService {
 
@@ -22,13 +27,6 @@ public class CpfService {
 			return new Response(1);
 		}
 		return new Response(0);
-	}
-
-	@GET
-	@Produces("application/json; charset=UTF-8")
-	@Path("/testar")
-	public Response getCpf() {
-		return new Response(1);
 	}
 
 }

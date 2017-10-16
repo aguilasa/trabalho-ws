@@ -4,6 +4,13 @@ import com.sun.jersey.spi.container.ContainerRequest;
 import com.sun.jersey.spi.container.ContainerResponse;
 import com.sun.jersey.spi.container.ContainerResponseFilter;
 
+/**
+ * Esta classe é responsável por permitir o Controle de Acesso HTTP (CORS)
+ * 
+ * @see <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Controle_Acesso_CORS">Controle de Acesso HTTP (CORS)</a>
+ * @author ingmar
+ *
+ */
 public class CORSFilter implements ContainerResponseFilter {
     @Override
     public ContainerResponse filter(ContainerRequest request,
